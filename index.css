@@ -1,19 +1,19 @@
-body{
-    display: flex;
-    justify-content: center;
+body {
+  display: flex;
+  justify-content: center;
 }
 
-#gameContainer{
-    position: relative;
-    width: 800px;
-    height: 800px;
+#gameContainer {
+  position: relative;
+  width: 800px;
+  height: 800px;
 
-    border: 3px solid;
+  border: 3px solid;
 }
 
-#bg{
+#bg {
   /* background-color: red; */
-  position: absolute;  /* 相对于 gameContainer 定位 */
+  position: absolute; /* 相对于 gameContainer 定位 */
   top: 0;
   left: 0;
 }

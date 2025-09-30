@@ -1,5 +1,3 @@
-import { config } from "../configs/globalConfig.js"
-
 function createFood() {
     const x = Math.floor(Math.random() * 40);
     const y = Math.floor(Math.random() * 40);

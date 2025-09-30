@@ -1,4 +1,4 @@
-import { config } from "../config"
+import { config } from "./configs/globalConfig.js"
 
 function gridToPixel(gridItem) {
     return {

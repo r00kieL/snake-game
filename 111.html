@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 第一题 -->
+    <script>
+      const score = 95;
+
+      if (score > 100 || score < 0) {
+        console.log("成绩无效");
+      } else if (90 <= score && score <= 100) {
+        console.log("优秀");
+      } else if (80 <= score && score < 90) {
+        console.log("良好");
+      } else if (60 <= score && score < 80) {
+        console.log("及格");
+      } else {
+        console.log("不及格");
+      }
+    </script>
+
+    <script>console.log("------------------------------------------")</script>
+
+    <!-- 第二题 -->
+    <script>
+      let sum = 0;
+      for (let x = 1; x <= 100; x++) {
+        if (x % 2 === 0) {
+          //  是偶数
+          sum += x;
+
+          if (x % 10 === 0) {
+            console.log(x);
+          }
+        }
+      }
+
+      console.log(`100内的偶数和为: ${sum}`);
+    </script>
+
+    <script>console.log("------------------------------------------")</script>
+
+    <!-- 第三题 -->
+    <script>
+      let student = {
+        name: "张三",
+        age: 13,
+        grade: "高三",
+        hobbies: ["唱", "跳", "rap", "篮球"],
+      };
+
+      for (let key in student) {
+        console.log(key+ ": " +student[key]);
+      }
+
+      for(let key in student){
+        console.log(key)
+      }
+    </script>
+  </body>
+</html>

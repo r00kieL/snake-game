@@ -1,3 +1,4 @@
 function die() {
-    
 }
+
+export { die }

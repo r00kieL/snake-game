@@ -10,6 +10,8 @@ import { drawSnake } from "./tools/snake/drawSnake.js";
 import { growSnake } from "./tools/snake/growSnake.js";
 import { getNextHead } from "./tools/predictions/getNextHead.js";
 import { willHitWall } from "./tools/predictions/willHitWall.js";
+import { willEatFood } from "./tools/predictions/willEatFood.js"
+import { willEatOneself } from "./tools/predictions/willEatOneself.js";
 
 const ctx = config.gameCanvas.getContext("2d");
 
@@ -23,21 +25,23 @@ setInterval(() => {
     if (!food) food = createFood();
     const nextHead = getNextHead(snakeConfig.body[0]);
 
-    if (willHitWall(nextHead)) return;
-
-    // TODO 判断是吃到食物
-    // TODO 判断是否吃到自己
-
-    ctx.clearRect(0, 0, config.gameCanvas.width, config.gameCanvas.height);
-
-    drawFood(food);
-
-    // 吃到了食物
-    if (food.x === snakeConfig.body[0].x && food.y === snakeConfig.body[0].y) {
+    // 判断是否撞到墙
+    if (willHitWall(nextHead)) {
+        return;
+    }
+    // 判断是否吃到自己
+    if (willEatOneself(nextHead)) {
+        return;
+    }
+    // 判断是否吃到食物
+    if (willEatFood(nextHead, food)) {
         growSnake();
-        food = null;
+        food = createFood();
     } else {
         moveSnake();
     }
+
+    ctx.clearRect(0, 0, config.gameCanvas.width, config.gameCanvas.height);
+    drawFood(food);
     drawSnake();
-}, 200)
+}, 300)

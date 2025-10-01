@@ -1,6 +1,6 @@
 const config = {
-    gameCanvas: document.querySelector("#gameBoard"),
-    bgCanvas: document.querySelector("#bg"),
+    gameCanvas: document.querySelector(".game-board"),
+    bgCanvas: document.querySelector(".bg"),
 
     canvasWidth: 800,
     canvasHeight: 800,

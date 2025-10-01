@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  border: 3px solid;
+}
+
+.bg {
+  /* background-color: red; */
+  position: absolute; /* 相对于 game-container 定位 */
+  top: 0;
+  left: 0;
+}
+
+.message-container {
+  background-color: red;
+}
+
+.message-container-btns {
+  margin-top: 10px;
+}
+
+.start-btn,
+.pause-btn,
+.reset-btn {
+  margin: 0 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+}

@@ -1,0 +1,50 @@
+/* ====== Reset.css 极简通用版 ====== */
+
+/* 全局：去掉 margin，启用更直观的 box-sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body 默认字体和背景 */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #000;
+}
+
+/* 标题和段落：去掉 margin，保持清晰 */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* 列表：去掉默认样式 */
+ul, ol {
+  list-style: none;
+}
+
+/* 图片：避免被父容器撑开 */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 表单：继承字体 */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 链接：移除默认颜色和下划线 */
+a {
+  text-decoration: none;
+  color: inherit;
+}

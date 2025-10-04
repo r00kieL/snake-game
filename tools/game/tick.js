@@ -8,6 +8,7 @@ import { willHitWall } from "../predictions/willHitWall.js";
 import { willEatFood } from "../predictions/willEatFood.js"
 import { willEatOneself } from "../predictions/willEatOneself.js";
 import { config } from "../configs/globalConfig.js";
+import { die } from "./die.js";
 config
 
 function tick() {
@@ -17,10 +18,12 @@ function tick() {
 
     // 判断是否撞到墙
     if (willHitWall(nextHead)) {
+        die("hitWall");
         return;
     }
     // 判断是否吃到自己
     if (willEatOneself(nextHead)) {
+        die("eatOneself");
         return;
     }
     // 判断是否吃到食物

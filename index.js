@@ -11,6 +11,7 @@ import { restartGame } from "./tools/game/restartGame.js";
 drawGrid(config.bgCanvas);
 // 监听方向输入
 setupDirectionListener();
+// 给按钮设置监听器
 document.querySelector('.start-btn').addEventListener('click', startGame);
 document.querySelector('.pause-btn').addEventListener('click', pauseGame);
 document.querySelector('.reset-btn').addEventListener('click', restartGame);

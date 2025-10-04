@@ -12,7 +12,6 @@ function setupDirectionListener() {
         for (let mDir in mDirs) {
             mDirs[mDir] = false;
         }
-
         mDirs[e.key] = true;
     });
 }

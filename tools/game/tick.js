@@ -9,6 +9,7 @@ import { willEatFood } from "../predictions/willEatFood.js"
 import { willEatOneself } from "../predictions/willEatOneself.js";
 import { config } from "../configs/globalConfig.js";
 import { die } from "./die.js";
+import { addScore } from "./addScore.js";
 config
 
 function tick() {
@@ -29,6 +30,7 @@ function tick() {
     // 判断是否吃到食物
     if (willEatFood(nextHead, config.food)) {
         growSnake();
+        addScore();
         config.food = createFood();
     } else {
         moveSnake();

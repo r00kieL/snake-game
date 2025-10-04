@@ -22,6 +22,7 @@ const config = {
     },
 
     isFood: null,
+    score: 0,
 
     gameCanvas: document.querySelector(".game-board"),
     bgCanvas: document.querySelector(".bg"),

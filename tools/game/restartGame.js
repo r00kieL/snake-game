@@ -1,9 +1,11 @@
 import { config } from "../configs/globalConfig.js"
 import { snakeConfig,origSnakeConfig } from "../configs/snakeConfig.js";
+import { resetScore } from "./resetScore.js";
 
 function restartGame() {
     clearInterval(config.gameState.timerId);
     config.ctx.clearRect(0, 0, config.gameCanvas.width, config.gameCanvas.height);
+    resetScore();
 
     config.gameState.status = 'idle';
 

@@ -21,4 +21,6 @@ const snakeConfig = {
     },
 }
 
-export { snakeConfig }
+const origSnakeConfig = JSON.parse(JSON.stringify(snakeConfig));
+
+export { snakeConfig, origSnakeConfig }

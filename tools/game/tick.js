@@ -36,6 +36,8 @@ function tick() {
         moveSnake();
     }
 
+    config.directionLocked = false;
+
     config.ctx.clearRect(0, 0, config.gameCanvas.width, config.gameCanvas.height);
     drawFood(config.food);
     drawSnake();

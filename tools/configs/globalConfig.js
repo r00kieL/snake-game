@@ -12,7 +12,7 @@ const config = {
             "蛇蛇的身体完成了闭环。",
             "蛇蛇尝到了最熟悉的味道。",
             "蛇蛇的命运在循环中结束了。",
-            "蛇蛇画了一个圆(也许没那么圆)，用自己的方式。",
+            "蛇蛇用自己的方式画了一个圆(也许没那么圆)。",
         ]
     },
 
@@ -29,6 +29,8 @@ const config = {
 
     isFood: null,
     score: 0,
+
+    directionLocked: false,
 
     gameCanvas: document.querySelector(".game-board"),
     bgCanvas: document.querySelector(".bg"),

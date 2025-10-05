@@ -18,7 +18,3 @@ config.btns.pauseBtn.addEventListener('click', pauseGame);
 config.btns.resetBtn.addEventListener('click', restartGame);
 
 buttonControl();
-
-
-
-// TODO 设置按钮的逻辑

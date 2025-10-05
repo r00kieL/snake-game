@@ -1,5 +1,3 @@
-// BUG 往下移动的时候同时按下←↑或→上会咬到自己
-
 import { config } from "./configs/globalConfig.js";
 import { snakeConfig } from "./configs/snakeConfig.js";
 
@@ -8,7 +6,9 @@ function setupDirectionListener() {
         if (config.directionLocked) return;
 
         const mDirs = snakeConfig.movingDirections;
+        const validKeys = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
 
+        if (!validKeys.includes(e.key)) return;
         if (e.key === "ArrowUp" && mDirs.ArrowDown) return;
         if (e.key === "ArrowDown" && mDirs.ArrowUp) return;
         if (e.key === "ArrowLeft" && mDirs.ArrowRight) return;

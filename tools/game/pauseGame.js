@@ -1,3 +1,4 @@
+import { buttonControl } from "../buttonControl.js";
 import { config } from "../configs/globalConfig.js"
 import { startGame } from "./startGame.js";
 
@@ -17,6 +18,7 @@ function pauseGame() {
         clearInterval(config.gameState.timerId);
         config.gameState.timerId = null;
         config.gameState.status = 'paused';
+        buttonControl();
     }
 }
 

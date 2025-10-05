@@ -18,7 +18,13 @@ const config = {
 
     gameState: {
         timerId: null,
-        status: 'idle', // 可能的值：'idle' | 'running' | 'paused' | 'dead'
+        status: 'idle', // 可能的值：'idle' | 'running' | 'paused'
+    },
+
+    btns: {
+        startBtn: document.querySelector('.start-btn'),
+        pauseBtn: document.querySelector('.pause-btn'),
+        resetBtn: document.querySelector('.reset-btn'),
     },
 
     isFood: null,

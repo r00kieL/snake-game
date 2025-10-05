@@ -1,3 +1,5 @@
+// BUG 往下移动的时候同时按下←↑会咬到自己
+
 import { snakeConfig } from "./configs/snakeConfig.js";
 
 function setupDirectionListener() {
